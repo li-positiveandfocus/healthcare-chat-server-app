@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import * as usersDao from "../daos/usersDao.js";
-// import * as followService from "../service/followService.js";
+import * as followService from "../service/followService.js";
 const saltRounds = 10;
 
 const createUser = async (req, res) => {
@@ -56,13 +56,13 @@ const findUserByUsername = async (req, res) => {
 
   const user = await usersDao.findUserByUsername(username);
 
-  // if (flag) {
-  //   const newUser = await followService.getSingleFollowedUser(uid1, user);
+  if (flag) {
+    const newUser = await followService.getSingleFollowedUser(uid1, user);
 
-  //   res.json(newUser);
-  // } else {
-  //   res.json(user);
-  // }
+    res.json(newUser);
+  } else {
+    res.json(user);
+  }
 };
 
 const findUserBySingleUsername = async (req, res) => {

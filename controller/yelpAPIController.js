@@ -3,7 +3,7 @@ import api from "api";
 const sdk = api("@yelp-developers/v1.0#2hsur2ylbank95o");
 
 sdk.auth(
-  "Bearer yNg5YLB7iLiP63KPBaCv6SZ8M1mAwsCqXDSruWSrVlYz3CCJLQz47mVkHW1HVm6FJHnt788c0LBClbAEOxgM941QTKY8MgSvPtFI7_IEtaq3ETvbdLTZPylMAxyWY3Yx"
+  "Bearer RFsdSSg9x-w8RaXdVkS9sKOnPdiUrFDlpdIbFswAJ5AZemXA4luT9Fq4f-KB2ULJ1ivY3E2sSpYWQSPakBqxypR4HW8ruHX3aJ0eW6jWVmcGEwzoUU2o9tQ42sKMZHYx"
 );
 
 // Sample url: `/api/businesses?term=piazza&location=seattle`
