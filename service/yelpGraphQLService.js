@@ -40,6 +40,7 @@ export const getBusinessDetails = async (businessIds) => {
   for (const keyValue in data) {
     jsonArr.push(data[keyValue]);
   }
+
   const processedData = {
     businesses: jsonArr,
   };

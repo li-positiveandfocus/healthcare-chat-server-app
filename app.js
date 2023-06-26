@@ -13,11 +13,11 @@ import YelpAPIController from "./controller/yelpAPIController.js";
 // connect to a MongoDB database, either locally or on MongoDB Atlas. But as I mentioned,
 // due to the use of the || operator, it only ever assigns the local database connection string
 // to CONNECTION_STRING, and then it attempts to connect to a MongoDB Atlas cluster.
-const CONNECTION_STRING =
-  "mongodb://localhost:27017/yelp" ||
-  "mongodb+srv://linjingli2012:linjingli2012@cluster0.qukj6d1.mongodb.net/?retryWrites=true&w=majority";
+// const CONNECTION_STRING =
+//   "mongodb://localhost:27017/yelp" ||
+//   "mongodb+srv://linjingli2012:linjingli2012@cluster0.qukj6d1.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(
-  "mongodb+srv://linjingli2012:linjingli2012@cluster0.qukj6d1.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb+srv://linjingli2012:linjingli2012@cluster0.qukj6d1.mongodb.net/project?retryWrites=true&w=majority"
 );
 
 const app = express();

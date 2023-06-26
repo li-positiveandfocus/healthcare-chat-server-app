@@ -3,7 +3,7 @@ import * as reviewsDao from "../daos/reviewsDao.js";
 const createReview = async (req, res) => {
   const newReview = req.body;
   // newReview.reviewTime = new Date().toLocaleString();
-  newReview.reviewTime = new Date("2022/12/13 15:01:00");
+  newReview.reviewTime = new Date("2023/06/17 15:01:00");
   const insertedReview = await reviewsDao.createReview(newReview);
   res.json(insertedReview);
 };

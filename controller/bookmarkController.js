@@ -40,7 +40,7 @@ const BookmarkController = (app) => {
   app.get("/api/users/:uid/bookmarks", findAllBookmarkByUser);
   app.post("/api/users/:uid/bookmarks/:bid", userBookmarkBusiness);
   app.delete("/api/users/:uid/bookmarks/:bid", userDeleteBookmarkedBusiness);
-  app.get("/api/users/:uid/bookmarks/:bid", userBookmarkedBusinessOrNot);
+  // app.get("/api/users/:uid/bookmarks/:bid", userBookmarkedBusinessOrNot);
 };
 
 export default BookmarkController;

@@ -6,6 +6,7 @@ const saltRounds = 10;
 const signup = async (req, res) => {
   const newUser = req.body;
   const password = newUser.password;
+  const accountType = newUser.accountType;
   const hash = await bcrypt.hash(password, saltRounds);
 
   newUser.password = hash;
@@ -17,7 +18,7 @@ const signup = async (req, res) => {
     return;
   } else {
     const insertedUser = await usersDao.createUser(newUser);
-    insertedUser.password = "";
+    // insertedUser.password = "";
     req.session["profile"] = insertedUser;
     res.json(insertedUser);
   }
@@ -25,6 +26,7 @@ const signup = async (req, res) => {
 
 const profile = (req, res) => {
   const profile = req.session["profile"];
+  console.log(profile);
   if (profile) {
     profile.password = "";
     res.json(profile);
